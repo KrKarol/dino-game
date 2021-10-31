@@ -14,7 +14,7 @@ setInterval(() => {
     points.textContent = Number(points.textContent) + 1;
 }, 500);
 
-function newFunction() {
+function jump() {
     return function (e) {
         if (e.key == "ArrowUp") {
             if (dino.classList.contains("jump")) {
@@ -31,4 +31,4 @@ function newFunction() {
 }
 
 
-window.addEventListener("keydown", newFunction())
+window.addEventListener("keydown", jump())
