@@ -12,14 +12,17 @@
     position: absolute;
     top:150px;
 }
-
+.dashboard{
+    margin: 0 auto;
+    text-align: center;
+}
 .block{
     width: 20px;
-    height: 20px;
+    height: 40px;
     background-color: steelblue;
     position: absolute;
-    left: calc(100% - 20px);
-    top: 180px;
+    right: 0px;
+    bottom: 0px;
     animation: 2s run linear infinite;
 }
 .jump{

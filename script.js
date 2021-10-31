@@ -1,19 +1,18 @@
 let dino = document.querySelector(".seo");
 let block = document.querySelector(".block");
-
-
-console.log(block.offsetLeft);
-
-window.addEventListener("keydown", newFunction())
+let points = document.querySelector(".points");
 
 setInterval(()=>{
-    if(dino.offsetLeft+20 >= block.offsetLeft ){
-        console.log("bam");
-        console.log(block.offsetLeft)
+    if(dino.offsetLeft+15 >= block.offsetLeft && dino.offsetTop + dino.offsetHeight >= block.offsetTop){
+        console.log("Skok nieudany");
         block.style.animation = "none";
-        alert("zgon")
-    }
+        alert("Zdobyłeś/aś: " + points.textContent)
+    }else false
 },10)
+
+setInterval(() => {
+    points.textContent = Number(points.textContent) + 1;
+}, 500);
 
 function newFunction() {
     return function (e) {
@@ -30,3 +29,6 @@ function newFunction() {
         }
     }
 }
+
+
+window.addEventListener("keydown", newFunction())
